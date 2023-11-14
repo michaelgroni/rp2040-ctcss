@@ -18,9 +18,9 @@ pico_generate_pio_header(tr-pll ${CMAKE_CURRENT_LIST_DIR}/ctcss.pio)
 #include "hardware/clocks.h"
 include "ctcss.pio.h"
 
-inline const auto CTCSS_PIO = pio1;
-inline const uint CTCSS_PIN = 10;
-inline const uint CTCSS_CYCLES = 180;
+inline const auto CTCSS_PIO = pio1;   // pio0 or pio1
+inline const uint CTCSS_PIN = 10;     // any GPIO pin
+inline const uint CTCSS_CYCLES = 180; // do not change
 ```
 ...
 ```
