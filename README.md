@@ -9,7 +9,7 @@ Copy `ctcss.pio` into your project folder.
 
 ## in CMakeListe.txt
 ```
-pico_generate_pio_header(tr-pll ${CMAKE_CURRENT_LIST_DIR}/ctcss.pio)
+pico_generate_pio_header(<your project name> ${CMAKE_CURRENT_LIST_DIR}/ctcss.pio)
 ```
 
 ## somewhere
