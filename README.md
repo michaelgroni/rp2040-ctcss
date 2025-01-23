@@ -16,7 +16,7 @@ pico_generate_pio_header(<your project name> ${CMAKE_CURRENT_LIST_DIR}/ctcss.pio
 ```
 #include "hardware/pio.h"
 #include "hardware/clocks.h"
-include "ctcss.pio.h"
+#include "ctcss.pio.h"
 
 inline const auto CTCSS_PIO = pio1;   // pio0 or pio1
 inline const uint CTCSS_PIN = 10;     // any GPIO pin
