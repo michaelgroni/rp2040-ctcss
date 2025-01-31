@@ -13,7 +13,7 @@ pico_generate_pio_header(<your project name> ${CMAKE_CURRENT_LIST_DIR}/ctcss.pio
 ```
 
 ## somewhere
-```
+```C++
 #include "hardware/pio.h"
 #include "hardware/clocks.h"
 #include "ctcss.pio.h"
@@ -23,7 +23,7 @@ inline const uint CTCSS_PIN = 10;     // any GPIO pin
 inline const uint CTCSS_CYCLES = 180; // do not change
 ```
 ...
-```
+```C++
 // setup ctcss pio
 uint ctcssOffset = pio_add_program(CTCSS_PIO, &ctcss_program);
 uint ctcssSm = pio_claim_unused_sm(CTCSS_PIO, true);
@@ -34,7 +34,7 @@ pio_sm_init(CTCSS_PIO, ctcssSm, ctcssOffset, &ctcssConfig);
 pio_sm_set_enabled(CTCSS_PIO, ctcssSm, false);
 ```
 ...
-```
+```C++
 // run ctcss pio
 const double fCtcss = 151.4; // ctcss frequency
 const auto sysClock = clock_get_hz(clk_sys);
